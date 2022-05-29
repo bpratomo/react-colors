@@ -7,6 +7,10 @@ interface BoxProps {
 }
 
 export const ColorBox: FC<BoxProps> = (props) => {
+  function copyToClipboard() {
+    navigator.clipboard.writeText(props.color.color.toString());
+    console.log(`copied ${props.color.color}`);
+  }
   return (
     <div
       className="ColorBox"
@@ -16,7 +20,9 @@ export const ColorBox: FC<BoxProps> = (props) => {
         <div className="box-content">
           <span>{props.color.name}</span>
         </div>
-        <button className="copy-button">Copy</button>
+        <button className="copy-button" onClick={(e) => copyToClipboard()}>
+          Copy
+        </button>
       </div>
       <span className="see-more">More</span>
     </div>
