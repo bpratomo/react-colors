@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { Box } from "./Box";
+import { ColorBox } from "./Box";
+import "./Pallette.css";
 export interface Color {
   name: String;
   color: String;
@@ -18,11 +19,10 @@ interface Pallette {
 
 const Pallette: FC<PalletteProps> = (props) => {
   return (
-    <div>
-      {props.pallette.paletteName}
-      <div>
+    <div className="Pallette">
+      <div className="Pallette-Colors">
         {props.pallette.colors.map((c) => (
-          <Box color={c} />
+          <ColorBox color={c} />
         ))}
       </div>
     </div>

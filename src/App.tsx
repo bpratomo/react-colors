@@ -1,11 +1,11 @@
-import Colors from "./seedColors.js";
+import Pallettes from "./seedColors.js";
 import "./App.css";
 import Pallette from "./Pallette";
 
 function App() {
   return (
     <div className="App">
-      <Pallette pallette={Colors[0]} />
+      <Pallette pallette={Pallettes[2]} />
     </div>
   );
 }
