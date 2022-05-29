@@ -12,7 +12,13 @@ export const ColorBox: FC<BoxProps> = (props) => {
       className="ColorBox"
       style={{ backgroundColor: `${props.color.color}` }}
     >
-      {props.color.name}
+      <div className="copy-container">
+        <div className="box-content">
+          <span>{props.color.name}</span>
+        </div>
+        <button className="copy-button">Copy</button>
+      </div>
+      <span className="see-more">More</span>
     </div>
   );
 };

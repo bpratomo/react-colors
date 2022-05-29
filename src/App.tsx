@@ -1,5 +1,5 @@
 import Pallettes from "./seedColors.js";
-import "./App.css";
+// import "./App.css";
 import Pallette from "./Pallette";
 
 function App() {
